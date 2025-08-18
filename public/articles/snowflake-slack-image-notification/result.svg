@@ -1,0 +1,76 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .slack-bg { fill: #ffffff; }
+      .slack-border { stroke: #e1e5e9; stroke-width: 1; fill: none; }
+      .slack-header { fill: #4a154b; }
+      .slack-text { font-family: Arial, sans-serif; fill: #1d1c1d; }
+      .slack-time { fill: #616061; font-size: 11px; }
+      .bot-badge { fill: #007a5a; }
+      .image-border { stroke: #e1e5e9; stroke-width: 2; fill: #f8f9fa; }
+      .chart-line { stroke: #2eb67d; stroke-width: 3; fill: none; }
+      .chart-grid { stroke: #e1e5e9; stroke-width: 0.5; }
+    </style>
+  </defs>
+  
+  <!-- Slack Window -->
+  <rect class="slack-bg slack-border" x="10" y="10" width="380" height="280" rx="8"/>
+  
+  <!-- Header -->
+  <rect class="slack-header" x="10" y="10" width="380" height="40" rx="8 8 0 0"/>
+  <text class="slack-text" x="25" y="32" style="fill: white; font-size: 16px; font-weight: bold;"># data-alerts</text>
+  
+  <!-- Bot Message -->
+  <circle fill="#007a5a" cx="35" cy="75" r="15"/>
+  <text x="28" y="82" style="fill: white; font-size: 14px; font-weight: bold;">B</text>
+  
+  <!-- Bot Name and Badge -->
+  <text class="slack-text" x="60" y="70" style="font-size: 14px; font-weight: bold;">Snowflake Bot</text>
+  <rect class="bot-badge" x="160" y="62" width="25" height="14" rx="7"/>
+  <text x="167" y="71" style="fill: white; font-size: 9px;">BOT</text>
+  
+  <!-- Time -->
+  <text class="slack-time" x="60" y="82">今日 14:30</text>
+  
+  <!-- Image Block -->
+  <rect class="slack-border" x="60" y="95" width="300" height="20" rx="4"/>
+  <text class="slack-text" x="70" y="108" style="font-size: 12px; font-weight: bold;">sample画像だよ</text>
+  
+  <!-- Sample Chart Image -->
+  <rect class="image-border" x="60" y="120" width="300" height="150" rx="8"/>
+  
+  <!-- Chart Content -->
+  <g transform="translate(80, 140)">
+    <!-- Grid lines -->
+    <line class="chart-grid" x1="0" y1="0" x2="260" y2="0"/>
+    <line class="chart-grid" x1="0" y1="30" x2="260" y2="30"/>
+    <line class="chart-grid" x1="0" y1="60" x2="260" y2="60"/>
+    <line class="chart-grid" x1="0" y1="90" x2="260" y2="90"/>
+    <line class="chart-grid" x1="0" y1="110" x2="260" y2="110"/>
+    
+    <!-- Chart line -->
+    <polyline class="chart-line" points="0,80 50,60 100,40 150,30 200,20 250,15"/>
+    
+    <!-- Data points -->
+    <circle fill="#2eb67d" cx="0" cy="80" r="4"/>
+    <circle fill="#2eb67d" cx="50" cy="60" r="4"/>
+    <circle fill="#2eb67d" cx="100" cy="40" r="4"/>
+    <circle fill="#2eb67d" cx="150" cy="30" r="4"/>
+    <circle fill="#2eb67d" cx="200" cy="20" r="4"/>
+    <circle fill="#2eb67d" cx="250" cy="15" r="4"/>
+    
+    <!-- Chart labels -->
+    <text class="slack-text" x="5" y="100" style="font-size: 10px;">1月</text>
+    <text class="slack-text" x="55" y="100" style="font-size: 10px;">2月</text>
+    <text class="slack-text" x="105" y="100" style="font-size: 10px;">3月</text>
+    <text class="slack-text" x="155" y="100" style="font-size: 10px;">4月</text>
+    <text class="slack-text" x="205" y="100" style="font-size: 10px;">5月</text>
+    
+    <!-- Chart title -->
+    <text class="slack-text" x="100" y="-10" style="font-size: 14px; font-weight: bold; text-anchor: middle;">売上推移グラフ</text>
+  </g>
+  
+  <!-- Message reactions -->
+  <rect fill="#f8f9fa" stroke="#e1e5e9" x="60" y="280" width="40" height="20" rx="10"/>
+  <text x="68" y="292" style="font-size: 12px;">👍 2</text>
+</svg>
