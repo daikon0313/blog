@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production'
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] || 'homepage'
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] || 'blog'
 
 const nextConfig = {
   output: 'export',
