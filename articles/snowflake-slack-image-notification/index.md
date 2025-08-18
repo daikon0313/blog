@@ -7,7 +7,7 @@ published: true
 # はじめに
 
 こちらの記事の続きだと勝手に思っています。
-[SnowflakeからSlackに通知を送る方法](https://zenn.dev/churadata/articles/a553092387708b)
+参考：[SnowflakeからSlackに通知を送る方法](https://zenn.dev/churadata/articles/a553092387708b)
 
 今回は、Slack通知をSnowflakeから実行する際、画像を載せて通知を行います。
 
@@ -27,8 +27,6 @@ CREATE OR REPLACE STAGE SAMPLE_STAGE ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE');
 
 > **⚠️ 重要な注意点**  
 > STAGE 作成時に、`ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE')`を指定する必要があります。指定しない場合、ファイルが破損する場合があります。
-
-![STAGE暗号化設定](/articles/snowflake-slack-image-notification/image.png)
 
 ## 3. 画像ファイルの配置
 
@@ -104,8 +102,6 @@ CALL slack_send_image();
 ## 6. 結果確認
 
 SlackへSTAGEに格納した画像が送られてきます。
-
-![Slack通知結果](/articles/snowflake-slack-image-notification/result.svg)
 
 # まとめ
 
