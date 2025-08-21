@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import { getCategoryBreadcrumbs } from '../../lib/categories'
+import { getCategoryBreadcrumbs, buildCategoryTree } from '../../lib/categories'
+import { processWikiLinks } from '../../lib/wikilinks'
+import Sidebar from '../../components/Layout/Sidebar'
+import TOC from '../../components/Layout/TOC'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -21,16 +24,18 @@ export async function getStaticProps({ params }) {
   }
   
   const breadcrumbs = postData.category ? getCategoryBreadcrumbs(postData.category) : []
+  const categoryTree = buildCategoryTree()
   
   return {
     props: {
       postData,
       breadcrumbs,
+      categoryTree,
     },
   }
 }
 
-export default function Article({ postData, breadcrumbs }) {
+export default function Article({ postData, breadcrumbs, categoryTree }) {
   return (
     <div className="wiki-layout">
       <Head>
@@ -40,12 +45,10 @@ export default function Article({ postData, breadcrumbs }) {
 
       <div className="wiki-container">
         {/* 左サイドバー - カテゴリナビゲーション */}
-        <aside className="wiki-sidebar-left">
-          <div className="category-nav">
-            <h3>📚 カテゴリ</h3>
-            {/* TODO: カテゴリツリーコンポーネント */}
-          </div>
-        </aside>
+        <Sidebar 
+          categoryTree={categoryTree} 
+          currentPath={postData.category} 
+        />
 
         {/* メインコンテンツ */}
         <main className="wiki-main-content">
@@ -106,15 +109,20 @@ export default function Article({ postData, breadcrumbs }) {
 
         {/* 右サイドバー - 目次・関連記事 */}
         <aside className="wiki-sidebar-right">
-          <div className="toc-section">
-            <h4>📋 目次</h4>
-            {/* TODO: 目次コンポーネント */}
-          </div>
+          <TOC content={postData.content || ''} />
           
           {postData.related && postData.related.length > 0 && (
             <div className="related-section">
               <h4>🔗 関連記事</h4>
-              {/* TODO: 関連記事コンポーネント */}
+              <ul className="related-list">
+                {postData.related.map((relatedPath) => (
+                  <li key={relatedPath}>
+                    <Link href={`/articles/${relatedPath}`}>
+                      {relatedPath}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </aside>
@@ -250,12 +258,44 @@ export default function Article({ postData, breadcrumbs }) {
           color: #333;
         }
 
-        .category-nav h3,
-        .toc-section h4,
+        .related-section {
+          background: #f8f9fa;
+          border: 1px solid #e1e5e9;
+          border-radius: 8px;
+          padding: 15px;
+          margin-top: 20px;
+        }
+
         .related-section h4 {
           margin: 0 0 15px 0;
           font-size: 1rem;
           color: #333;
+          font-weight: 600;
+        }
+
+        .related-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .related-list li {
+          margin: 8px 0;
+        }
+
+        .related-list a {
+          color: #0645ad;
+          text-decoration: none;
+          font-size: 0.9rem;
+          padding: 4px 8px;
+          border-radius: 4px;
+          display: block;
+          transition: background-color 0.2s ease;
+        }
+
+        .related-list a:hover {
+          background: #e3f2fd;
+          text-decoration: none;
         }
 
         /* レスポンシブ対応 */
