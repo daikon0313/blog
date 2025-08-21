@@ -1,7 +1,10 @@
 ---
 title: "SnowflakeからSlackに画像付き通知を送る方法"
+category: "programming/databases/snowflake"
 tags: ["Snowflake", "Slack", "Python", "データベース"]
+description: "SnowflakeのSTAGE機能を使用してSlackに画像付き通知を送信する方法を解説"
 published: true
+related: ["programming/languages/python"]
 ---
 
 # はじめに
@@ -27,6 +30,8 @@ CREATE OR REPLACE STAGE SAMPLE_STAGE ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE');
 
 > **⚠️ 重要な注意点**  
 > STAGE 作成時に、`ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE')`を指定する必要があります。指定しない場合、ファイルが破損する場合があります。
+
+![STAGE暗号化設定](/articles/programming/databases/snowflake/slack-integration/image.png)
 
 ## 3. 画像ファイルの配置
 
@@ -102,6 +107,8 @@ CALL slack_send_image();
 ## 6. 結果確認
 
 SlackへSTAGEに格納した画像が送られてきます。
+
+![Slack通知結果](/articles/programming/databases/snowflake/slack-integration/result.svg)
 
 # まとめ
 
