@@ -31,7 +31,7 @@ CREATE OR REPLACE STAGE SAMPLE_STAGE ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE');
 > **⚠️ 重要な注意点**  
 > STAGE 作成時に、`ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE')`を指定する必要があります。指定しない場合、ファイルが破損する場合があります。
 
-![STAGE暗号化設定](/articles/programming/databases/snowflake/slack-integration/image.png)
+*（STAGE作成時の暗号化設定画面のスクリーンショット）*
 
 ## 3. 画像ファイルの配置
 
@@ -108,7 +108,7 @@ CALL slack_send_image();
 
 SlackへSTAGEに格納した画像が送られてきます。
 
-![Slack通知結果](/articles/programming/databases/snowflake/slack-integration/result.svg)
+*（Slackチャンネルに画像付きメッセージが送信された様子）*
 
 # まとめ
 

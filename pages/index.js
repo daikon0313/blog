@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import { buildCategoryTree } from '../lib/categories'
+import Layout from '../components/Layout/Layout'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -38,28 +39,27 @@ export default function Home({ allPostsData, categoryTree, recentPosts }) {
   }
 
   return (
-    <div className="wiki-home">
+    <Layout 
+      showSidebar={false} 
+      showTOC={false} 
+      categoryTree={categoryTree}
+      searchEnabled={true}
+    >
       <Head>
         <title>Tech Wiki - 技術ナレッジベース</title>
         <meta name="description" content="技術情報を体系的に整理したナレッジベースサイト" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="wiki-header">
-        <h1 className="wiki-title">
+      <div className="wiki-home-hero">
+        <h1 className="hero-title">
           📚 Tech Wiki
         </h1>
-        <p className="wiki-subtitle">技術ナレッジベース</p>
-        
-        {/* 検索バー（プレースホルダー） */}
-        <div className="search-container">
-          <input 
-            type="search" 
-            placeholder="🔍 記事を検索..." 
-            className="search-input"
-            disabled
-          />
-        </div>
+        <p className="hero-subtitle">技術ナレッジベース</p>
+        <p className="hero-description">
+          技術情報を体系的に整理したナレッジベースサイトです。<br />
+          プログラミング、データベース、ツールなどの情報を効率的に管理・検索できます。
+        </p>
       </div>
 
       <div className="wiki-dashboard">
@@ -129,65 +129,50 @@ export default function Home({ allPostsData, categoryTree, recentPosts }) {
       </div>
 
       <style jsx>{`
-        .wiki-home {
-          min-height: 100vh;
-          background: #ffffff;
-        }
-
-        .wiki-header {
+        .wiki-home-hero {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
-          padding: 60px 20px;
+          padding: var(--wiki-spacing-2xl) var(--wiki-spacing-lg);
           text-align: center;
+          border-radius: 12px;
+          margin-bottom: var(--wiki-spacing-2xl);
+          box-shadow: var(--wiki-shadow-medium);
         }
 
-        .wiki-title {
-          font-size: 3rem;
-          margin: 0 0 10px 0;
+        .hero-title {
+          font-size: 2.5rem;
+          margin: 0 0 var(--wiki-spacing-md) 0;
           font-weight: 700;
         }
 
-        .wiki-subtitle {
+        .hero-subtitle {
           font-size: 1.2rem;
-          margin: 0 0 30px 0;
+          margin: 0 0 var(--wiki-spacing-md) 0;
           opacity: 0.9;
+          font-weight: 500;
         }
 
-        .search-container {
-          max-width: 500px;
+        .hero-description {
+          font-size: 1rem;
+          margin: 0;
+          opacity: 0.8;
+          line-height: 1.6;
+          max-width: 600px;
           margin: 0 auto;
-        }
-
-        .search-input {
-          width: 100%;
-          padding: 15px 20px;
-          border: none;
-          border-radius: 25px;
-          font-size: 16px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          outline: none;
-        }
-
-        .search-input:disabled {
-          background: #f8f9fa;
-          color: #666;
         }
 
         .wiki-dashboard {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 40px 20px;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 40px;
+          gap: var(--wiki-spacing-2xl);
         }
 
         .dashboard-section {
-          background: #ffffff;
-          border: 1px solid #e1e5e9;
+          background: var(--wiki-bg-primary);
+          border: 1px solid var(--wiki-border-light);
           border-radius: 12px;
-          padding: 30px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          padding: var(--wiki-spacing-xl);
+          box-shadow: var(--wiki-shadow-light);
         }
 
         .section-title {
@@ -372,6 +357,6 @@ export default function Home({ allPostsData, categoryTree, recentPosts }) {
           }
         }
       `}</style>
-    </div>
+    </Layout>
   )
 }

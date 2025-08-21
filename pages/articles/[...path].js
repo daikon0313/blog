@@ -3,8 +3,7 @@ import Link from 'next/link'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { getCategoryBreadcrumbs, buildCategoryTree } from '../../lib/categories'
 import { processWikiLinks } from '../../lib/wikilinks'
-import Sidebar from '../../components/Layout/Sidebar'
-import TOC from '../../components/Layout/TOC'
+import Layout from '../../components/Layout/Layout'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -37,37 +36,34 @@ export async function getStaticProps({ params }) {
 
 export default function Article({ postData, breadcrumbs, categoryTree }) {
   return (
-    <div className="wiki-layout">
+    <Layout
+      showSidebar={true}
+      showTOC={true}
+      tocData={postData.toc || []}
+      categoryTree={categoryTree}
+      searchEnabled={true}
+    >
       <Head>
         <title>{postData.title} - Tech Wiki</title>
         <meta name="description" content={postData.description || postData.title} />
       </Head>
 
-      <div className="wiki-container">
-        {/* 左サイドバー - カテゴリナビゲーション */}
-        <Sidebar 
-          categoryTree={categoryTree} 
-          currentPath={postData.category} 
-        />
+      {/* パンくずナビ */}
+      {breadcrumbs.length > 0 && (
+        <nav className="breadcrumb">
+          <Link href="/">🏠 ホーム</Link>
+          {breadcrumbs.map((crumb, index) => (
+            <span key={crumb.path}>
+              <span className="breadcrumb-separator"> / </span>
+              <Link href={`/categories/${crumb.path}`}>
+                {crumb.icon} {crumb.title}
+              </Link>
+            </span>
+          ))}
+        </nav>
+      )}
 
-        {/* メインコンテンツ */}
-        <main className="wiki-main-content">
-          {/* パンくずナビ */}
-          {breadcrumbs.length > 0 && (
-            <nav className="breadcrumb">
-              <Link href="/">🏠 ホーム</Link>
-              {breadcrumbs.map((crumb, index) => (
-                <span key={crumb.path}>
-                  <span className="breadcrumb-separator"> / </span>
-                  <Link href={`/categories/${crumb.path}`}>
-                    {crumb.icon} {crumb.title}
-                  </Link>
-                </span>
-              ))}
-            </nav>
-          )}
-
-          <article className="wiki-article">
+      <article className="wiki-article">
             <header className="article-header">
               <h1 className="article-title">{postData.title}</h1>
               
@@ -100,83 +96,25 @@ export default function Article({ postData, breadcrumbs, categoryTree }) {
               </div>
             </header>
 
-            <div 
-              className="article-content"
-              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-            />
-          </article>
-        </main>
-
-        {/* 右サイドバー - 目次・関連記事 */}
-        <aside className="wiki-sidebar-right">
-          <TOC content={postData.content || ''} />
-          
-          {postData.related && postData.related.length > 0 && (
-            <div className="related-section">
-              <h4>🔗 関連記事</h4>
-              <ul className="related-list">
-                {postData.related.map((relatedPath) => (
-                  <li key={relatedPath}>
-                    <Link href={`/articles/${relatedPath}`}>
-                      {relatedPath}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </aside>
-      </div>
+        <div 
+          className="article-content"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </article>
 
       <style jsx>{`
-        .wiki-layout {
-          min-height: 100vh;
-          background: #ffffff;
-        }
-
-        .wiki-container {
-          max-width: 1400px;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: 250px 1fr 200px;
-          gap: 20px;
-          padding: 20px;
-        }
-
-        .wiki-sidebar-left {
-          background: #f8f9fa;
-          border-right: 1px solid #e1e5e9;
-          padding: 20px;
-          border-radius: 8px;
-          height: fit-content;
-          position: sticky;
-          top: 20px;
-        }
-
-        .wiki-main-content {
-          min-width: 0;
-        }
-
-        .wiki-sidebar-right {
-          background: #f8f9fa;
-          border-left: 1px solid #e1e5e9;
-          padding: 20px;
-          border-radius: 8px;
-          height: fit-content;
-          position: sticky;
-          top: 20px;
-        }
 
         .breadcrumb {
-          margin-bottom: 20px;
-          padding: 10px;
-          background: #f8f9fa;
-          border-radius: 4px;
-          font-size: 14px;
+          margin-bottom: var(--wiki-spacing-lg);
+          padding: var(--wiki-spacing-sm) var(--wiki-spacing-md);
+          background: var(--wiki-bg-secondary);
+          border: 1px solid var(--wiki-border-light);
+          border-radius: 6px;
+          font-size: 0.9rem;
         }
 
         .breadcrumb a {
-          color: #0645ad;
+          color: var(--wiki-primary);
           text-decoration: none;
         }
 
@@ -185,137 +123,78 @@ export default function Article({ postData, breadcrumbs, categoryTree }) {
         }
 
         .breadcrumb-separator {
-          color: #666;
-          margin: 0 5px;
+          color: var(--wiki-text-muted);
+          margin: 0 var(--wiki-spacing-xs);
         }
 
         .wiki-article {
-          background: white;
-          border: 1px solid #e1e5e9;
-          border-radius: 8px;
-          padding: 30px;
+          /* No additional styling needed - handled by Layout component */
         }
 
         .article-header {
-          margin-bottom: 30px;
-          padding-bottom: 20px;
-          border-bottom: 1px solid #e1e5e9;
+          margin-bottom: var(--wiki-spacing-xl);
+          padding-bottom: var(--wiki-spacing-lg);
+          border-bottom: 1px solid var(--wiki-border-light);
         }
 
         .article-title {
           font-size: 2.2rem;
-          color: #333;
-          margin: 0 0 10px 0;
+          color: var(--wiki-text-primary);
+          margin: 0 0 var(--wiki-spacing-sm) 0;
           line-height: 1.3;
           font-weight: 600;
         }
 
         .article-description {
           font-size: 1.1rem;
-          color: #666;
-          margin: 0 0 20px 0;
+          color: var(--wiki-text-secondary);
+          margin: 0 0 var(--wiki-spacing-lg) 0;
           font-style: italic;
         }
 
         .article-meta {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: var(--wiki-spacing-sm);
         }
 
         .dates {
           display: flex;
           flex-wrap: wrap;
-          gap: 16px;
-          color: #666;
+          gap: var(--wiki-spacing-md);
+          color: var(--wiki-text-secondary);
           font-size: 0.9rem;
         }
 
         .tags {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
+          gap: var(--wiki-spacing-sm);
           align-items: center;
           font-size: 0.9rem;
         }
 
         .tag {
-          background: #e3f2fd;
-          color: #0645ad;
-          padding: 4px 8px;
+          background: var(--wiki-bg-accent);
+          color: var(--wiki-primary);
+          padding: var(--wiki-spacing-xs) var(--wiki-spacing-sm);
           border-radius: 12px;
           font-size: 0.8rem;
           text-decoration: none;
           font-weight: 500;
+          transition: background-color var(--wiki-transition-fast);
         }
 
         .tag:hover {
           background: #bbdefb;
+          text-decoration: none;
         }
 
         .article-content {
           line-height: 1.7;
-          color: #333;
-        }
-
-        .related-section {
-          background: #f8f9fa;
-          border: 1px solid #e1e5e9;
-          border-radius: 8px;
-          padding: 15px;
-          margin-top: 20px;
-        }
-
-        .related-section h4 {
-          margin: 0 0 15px 0;
-          font-size: 1rem;
-          color: #333;
-          font-weight: 600;
-        }
-
-        .related-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        .related-list li {
-          margin: 8px 0;
-        }
-
-        .related-list a {
-          color: #0645ad;
-          text-decoration: none;
-          font-size: 0.9rem;
-          padding: 4px 8px;
-          border-radius: 4px;
-          display: block;
-          transition: background-color 0.2s ease;
-        }
-
-        .related-list a:hover {
-          background: #e3f2fd;
-          text-decoration: none;
-        }
-
-        /* レスポンシブ対応 */
-        @media (max-width: 1024px) {
-          .wiki-container {
-            grid-template-columns: 1fr;
-            gap: 20px;
-          }
-
-          .wiki-sidebar-left,
-          .wiki-sidebar-right {
-            position: relative;
-            top: auto;
-          }
-
-          .article-title {
-            font-size: 1.8rem;
-          }
+          color: var(--wiki-text-primary);
         }
       `}</style>
-    </div>
+    </Layout>
   )
 }
