@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import { buildCategoryTree } from '../lib/categories'
+import { getPath } from '../lib/config'
 import Layout from '../components/Layout/Layout'
 
 export async function getStaticProps() {
@@ -23,7 +24,7 @@ export default function Home({ allPostsData, categoryTree, recentPosts }) {
     return categories.map((category) => (
       <div key={category.key} className="category-item">
         <div className="category-header">
-          <Link href={`/categories/${category.path}`} className="category-link">
+          <Link href={getPath(`/categories/${category.path}`)} className="category-link">
             <span className="category-icon">{category.icon}</span>
             <span className="category-title">{category.title}</span>
           </Link>
@@ -83,7 +84,7 @@ export default function Home({ allPostsData, categoryTree, recentPosts }) {
               recentPosts.map((post) => (
                 <article key={post.slug} className="recent-post">
                   <h3>
-                    <Link href={`/articles/${post.slug}`} className="post-link">
+                    <Link href={getPath(`/articles/${post.slug}`)} className="post-link">
                       {post.title}
                     </Link>
                   </h3>

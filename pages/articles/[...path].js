@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { getCategoryBreadcrumbs, buildCategoryTree } from '../../lib/categories'
 import { processWikiLinks } from '../../lib/wikilinks'
+import { getPath } from '../../lib/config'
 import Layout from '../../components/Layout/Layout'
 
 export async function getStaticPaths() {
@@ -51,11 +52,11 @@ export default function Article({ postData, breadcrumbs, categoryTree }) {
       {/* パンくずナビ */}
       {breadcrumbs.length > 0 && (
         <nav className="breadcrumb">
-          <Link href="/">🏠 ホーム</Link>
+          <Link href={getPath("/")}>🏠 ホーム</Link>
           {breadcrumbs.map((crumb, index) => (
             <span key={crumb.path}>
               <span className="breadcrumb-separator"> / </span>
-              <Link href={`/categories/${crumb.path}`}>
+              <Link href={getPath(`/categories/${crumb.path}`)}>
                 {crumb.icon} {crumb.title}
               </Link>
             </span>
@@ -87,7 +88,7 @@ export default function Article({ postData, breadcrumbs, categoryTree }) {
                   <div className="tags">
                     🏷️ 
                     {postData.tags.map((tag) => (
-                      <Link key={tag} href={`/tags/${encodeURIComponent(tag)}`} className="tag">
+                      <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag">
                         {tag}
                       </Link>
                     ))}

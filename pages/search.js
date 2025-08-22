@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import { buildCategoryTree } from '../lib/categories'
+import { getPath } from '../lib/config'
 import Layout from '../components/Layout/Layout'
 
 export async function getStaticProps() {
@@ -138,7 +139,7 @@ export default function Search({ allPostsData, categoryTree }) {
               {searchResults.map((post) => (
                 <article key={post.slug} className="search-result-item">
                   <h3 className="result-title">
-                    <Link href={`/articles/${post.slug}`} className="result-link">
+                    <Link href={getPath(`/articles/${post.slug}`)} className="result-link">
                       {highlightText(post.title, searchQuery)}
                     </Link>
                   </h3>
@@ -203,10 +204,10 @@ export default function Search({ allPostsData, categoryTree }) {
               <div className="search-tips">
                 <h4>人気の検索キーワード:</h4>
                 <div className="popular-keywords">
-                  <Link href="/search?q=JavaScript" className="keyword-tag">JavaScript</Link>
-                  <Link href="/search?q=React" className="keyword-tag">React</Link>
-                  <Link href="/search?q=Next.js" className="keyword-tag">Next.js</Link>
-                  <Link href="/search?q=データベース" className="keyword-tag">データベース</Link>
+                  <Link href={getPath("/search?q=JavaScript")} className="keyword-tag">JavaScript</Link>
+                  <Link href={getPath("/search?q=React")} className="keyword-tag">React</Link>
+                  <Link href={getPath("/search?q=Next.js")} className="keyword-tag">Next.js</Link>
+                  <Link href={getPath("/search?q=データベース")} className="keyword-tag">データベース</Link>
                 </div>
               </div>
             </div>

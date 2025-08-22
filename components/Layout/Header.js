@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { getPath } from '../../lib/config'
 import styles from '../../styles/wiki.module.css'
 
 export default function Header({ searchEnabled = true }) {
@@ -12,7 +13,7 @@ export default function Header({ searchEnabled = true }) {
   const handleSearch = (e) => {
     e.preventDefault()
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)
+      router.push(getPath(`/search?q=${encodeURIComponent(searchQuery.trim())}`))
     }
   }
 
@@ -40,7 +41,7 @@ export default function Header({ searchEnabled = true }) {
         <div className="header-content">
           {/* ロゴ・サイトタイトル */}
           <div className="header-brand">
-            <Link href="/" className={`${styles.wikiLink} brand-link`}>
+            <Link href={getPath("/")} className={`${styles.wikiLink} brand-link`}>
               <div className="brand-icon">📚</div>
               <div className="brand-text">
                 <span className="brand-title">Tech Wiki</span>
@@ -85,21 +86,21 @@ export default function Header({ searchEnabled = true }) {
           <nav className="header-nav">
             <div className="nav-links">
               <Link 
-                href="/" 
+                href={getPath("/")} 
                 className={`${styles.wikiNavItem} nav-link ${router.pathname === '/' ? styles.wikiNavItemActive : ''}`}
               >
                 <span>🏠</span>
                 <span>ホーム</span>
               </Link>
               <Link 
-                href="/categories/programming" 
+                href={getPath("/categories/programming")} 
                 className={`${styles.wikiNavItem} nav-link ${router.pathname.startsWith('/categories') ? styles.wikiNavItemActive : ''}`}
               >
                 <span>💻</span>
                 <span>カテゴリ</span>
               </Link>
               <Link 
-                href="/tags" 
+                href={getPath("/tags")} 
                 className={`${styles.wikiNavItem} nav-link ${router.pathname.startsWith('/tags') ? styles.wikiNavItemActive : ''}`}
               >
                 <span>🏷️</span>

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 import { buildCategoryTree } from '../lib/categories'
+import { getPath } from '../lib/config'
 import Layout from '../components/Layout/Layout'
 
 export async function getStaticProps() {
@@ -99,7 +100,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
             {tags.slice(0, 50).map(({ tag, count }) => (
               <Link
                 key={tag}
-                href={`/search?q=${encodeURIComponent(tag)}`}
+                href={getPath(`/search?q=${encodeURIComponent(tag)}`)}
                 className="tag-cloud-item"
                 style={{
                   fontSize: `${getTagSize(count)}rem`,
@@ -122,7 +123,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
               <h3>💻 プログラミング言語</h3>
               <div className="tag-list">
                 {categorizedTags.languages.map(({ tag, count }) => (
-                  <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag-item">
+                  <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag-item">
                     <span className="tag-name">{tag}</span>
                     <span className="tag-count">{count}</span>
                   </Link>
@@ -136,7 +137,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
               <h3>🔧 フレームワーク・ライブラリ</h3>
               <div className="tag-list">
                 {categorizedTags.frameworks.map(({ tag, count }) => (
-                  <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag-item">
+                  <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag-item">
                     <span className="tag-name">{tag}</span>
                     <span className="tag-count">{count}</span>
                   </Link>
@@ -150,7 +151,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
               <h3>🗄️ データベース</h3>
               <div className="tag-list">
                 {categorizedTags.databases.map(({ tag, count }) => (
-                  <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag-item">
+                  <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag-item">
                     <span className="tag-name">{tag}</span>
                     <span className="tag-count">{count}</span>
                   </Link>
@@ -164,7 +165,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
               <h3>🛠️ ツール・サービス</h3>
               <div className="tag-list">
                 {categorizedTags.tools.map(({ tag, count }) => (
-                  <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag-item">
+                  <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag-item">
                     <span className="tag-name">{tag}</span>
                     <span className="tag-count">{count}</span>
                   </Link>
@@ -178,7 +179,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
               <h3>📝 その他</h3>
               <div className="tag-list">
                 {categorizedTags.other.map(({ tag, count }) => (
-                  <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag-item">
+                  <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag-item">
                     <span className="tag-name">{tag}</span>
                     <span className="tag-count">{count}</span>
                   </Link>
@@ -193,7 +194,7 @@ export default function Tags({ allPostsData, categoryTree, tags }) {
           <h2>📋 全タグリスト</h2>
           <div className="all-tags-list">
             {tags.map(({ tag, count }) => (
-              <Link key={tag} href={`/search?q=${encodeURIComponent(tag)}`} className="tag-list-item">
+              <Link key={tag} href={getPath(`/search?q=${encodeURIComponent(tag)}`)} className="tag-list-item">
                 <span className="tag-name">{tag}</span>
                 <span className="tag-count">{count}件</span>
               </Link>

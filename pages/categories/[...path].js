@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { buildCategoryTree, getCategoryInfo, getCategoryBreadcrumbs } from '../../lib/categories'
 import { getPostsByCategory } from '../../lib/posts'
+import { getPath } from '../../lib/config'
 import Layout from '../../components/Layout/Layout'
 
 export async function getStaticPaths() {
@@ -89,11 +90,11 @@ export default function CategoryPage({
       </Head>
       {/* パンくずナビ */}
       <nav className="breadcrumb">
-        <Link href="/">🏠 ホーム</Link>
+        <Link href={getPath("/")}>🏠 ホーム</Link>
         {breadcrumbs.map((crumb, index) => (
           <span key={crumb.path}>
             <span className="breadcrumb-separator"> / </span>
-            <Link href={`/categories/${crumb.path}`}>
+            <Link href={getPath(`/categories/${crumb.path}`)}>
               {crumb.icon} {crumb.title}
             </Link>
           </span>
@@ -115,7 +116,7 @@ export default function CategoryPage({
             <div className="subcategories-grid">
               {childCategories.map((subcat) => (
                 <div key={subcat.key} className="subcategory-card">
-                  <Link href={`/categories/${subcat.path}`} className="subcategory-link">
+                  <Link href={getPath(`/categories/${subcat.path}`)} className="subcategory-link">
                     <div className="subcategory-icon">{subcat.icon}</div>
                     <h3 className="subcategory-title">{subcat.title}</h3>
                     <p className="subcategory-description">{subcat.description}</p>
@@ -134,7 +135,7 @@ export default function CategoryPage({
               {posts.map((post) => (
                 <article key={post.slug} className="post-item">
                   <h3>
-                    <Link href={`/articles/${post.slug}`} className="post-link">
+                    <Link href={getPath(`/articles/${post.slug}`)} className="post-link">
                       {post.title}
                     </Link>
                   </h3>
