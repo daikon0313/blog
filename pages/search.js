@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -27,14 +27,21 @@ export default function Search({ allPostsData, categoryTree }) {
 
   // URLクエリパラメータから検索クエリを取得
   useEffect(() => {
-    if (router.query.q) {
+    // URLSearchParamsを直接使用してクエリパラメータを取得
+    const urlParams = new URLSearchParams(window.location.search)
+    const query = urlParams.get('q')
+    
+    if (query) {
+      setSearchQuery(query)
+      performSearch(query)
+    } else if (router.query.q) {
       setSearchQuery(router.query.q)
       performSearch(router.query.q)
     }
-  }, [router.query.q])
+  }, [router.query.q, router.isReady, performSearch])
 
   // 検索実行
-  const performSearch = (query) => {
+  const performSearch = useCallback((query) => {
     if (!query || query.trim() === '') {
       setSearchResults([])
       return
@@ -60,7 +67,7 @@ export default function Search({ allPostsData, categoryTree }) {
 
     setSearchResults(results)
     setIsLoading(false)
-  }
+  }, [allPostsData])
 
   // 検索フォーム送信
   const handleSearch = (e) => {
