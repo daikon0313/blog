@@ -127,7 +127,7 @@ export default function Search({ allPostsData, categoryTree }) {
           {searchQuery && (
             <div className="search-stats">
               <p>
-                "<strong>{searchQuery}</strong>" の検索結果: {searchResults.length}件
+                "<strong>{searchQuery}</strong>" の検索結果: {searchResults.length}件 / 総記事数: {allPostsData.length}件
                 {isLoading && <span className="loading-indicator"> (検索中...)</span>}
               </p>
             </div>
@@ -208,7 +208,18 @@ export default function Search({ allPostsData, categoryTree }) {
                   <Link href={getPath("/search?q=React")} className="keyword-tag">React</Link>
                   <Link href={getPath("/search?q=Next.js")} className="keyword-tag">Next.js</Link>
                   <Link href={getPath("/search?q=データベース")} className="keyword-tag">データベース</Link>
+                  <Link href={getPath("/search?q=Snowflake")} className="keyword-tag">Snowflake</Link>
                 </div>
+              </div>
+
+              {/* デバッグ用：利用可能な記事一覧 */}
+              <div className="debug-info" style={{marginTop: '20px', fontSize: '0.8rem', color: '#666'}}>
+                <h4>利用可能な記事（デバッグ用）:</h4>
+                {allPostsData.map(post => (
+                  <div key={post.slug} style={{marginBottom: '5px'}}>
+                    • {post.title} (タグ: {post.tags ? post.tags.join(', ') : 'なし'})
+                  </div>
+                ))}
               </div>
             </div>
           )}
