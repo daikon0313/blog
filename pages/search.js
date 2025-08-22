@@ -95,9 +95,7 @@ export default function Search({ allPostsData, categoryTree }) {
       searchEnabled={false}
     >
       <Head>
-        <title>
-          {searchQuery ? `"${searchQuery}" の検索結果 - Tech Wiki` : '検索 - Tech Wiki'}
-        </title>
+        <title>{searchQuery ? `"${searchQuery}" の検索結果 - Tech Wiki` : '検索 - Tech Wiki'}</title>
         <meta name="description" content="技術記事を検索" />
       </Head>
 
