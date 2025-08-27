@@ -1,5 +1,5 @@
 {
-  "permalink": "/homepage/blog/sample-tech-blog",
+  "permalink": "/blog/blog/sample-tech-blog",
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2025-01-15-sample-tech-blog.md",
   "source": "@site/blog/2025-01-15-sample-tech-blog.md",
   "title": "データエンジニアリングのベストプラクティス",
@@ -9,25 +9,25 @@
     {
       "inline": false,
       "label": "データエンジニアリング",
-      "permalink": "/homepage/blog/tags/data-engineering",
+      "permalink": "/blog/blog/tags/data-engineering",
       "description": "データエンジニアリングに関する記事"
     },
     {
       "inline": false,
       "label": "ベストプラクティス",
-      "permalink": "/homepage/blog/tags/best-practices",
+      "permalink": "/blog/blog/tags/best-practices",
       "description": "開発におけるベストプラクティスに関する記事"
     },
     {
       "inline": false,
       "label": "Python",
-      "permalink": "/homepage/blog/tags/python",
+      "permalink": "/blog/blog/tags/python",
       "description": "Python言語に関する記事"
     },
     {
       "inline": false,
       "label": "SQL",
-      "permalink": "/homepage/blog/tags/sql",
+      "permalink": "/blog/blog/tags/sql",
       "description": "SQLとデータベースに関する記事"
     }
   ],
@@ -39,7 +39,7 @@
       "title": "Data Engineer & Software Developer",
       "url": "https://github.com/daikon0313",
       "page": {
-        "permalink": "/homepage/blog/authors/daikon-0313"
+        "permalink": "/blog/blog/authors/daikon-0313"
       },
       "socials": {
         "github": "https://github.com/daikon0313"

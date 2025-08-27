@@ -1,5 +1,5 @@
 {
-  "blogBasePath": "/homepage/blog",
+  "blogBasePath": "/blog/blog",
   "blogTitle": "Blog",
-  "authorsListPath": "/homepage/blog/authors"
+  "authorsListPath": "/blog/blog/authors"
 }

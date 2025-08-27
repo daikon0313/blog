@@ -29,9 +29,9 @@ export default {
     "experimental_router": "browser"
   },
   "url": "https://daikon0313.github.io",
-  "baseUrl": "/homepage/",
+  "baseUrl": "/blog/",
   "organizationName": "daikon0313",
-  "projectName": "homepage",
+  "projectName": "blog",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "i18n": {

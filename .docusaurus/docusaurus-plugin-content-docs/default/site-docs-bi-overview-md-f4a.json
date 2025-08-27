@@ -5,7 +5,7 @@
   "source": "@site/docs/bi/overview.md",
   "sourceDirName": "bi",
   "slug": "/bi/overview",
-  "permalink": "/homepage/docs/bi/overview",
+  "permalink": "/blog/docs/bi/overview",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/bi/overview.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "アプリケーション概要",
-    "permalink": "/homepage/docs/apps/overview"
+    "permalink": "/blog/docs/apps/overview"
   },
   "next": {
     "title": "プログラミング言語概要",
-    "permalink": "/homepage/docs/languages/overview"
+    "permalink": "/blog/docs/languages/overview"
   }
 }

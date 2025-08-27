@@ -5,7 +5,7 @@
   "source": "@site/docs/apps/overview.md",
   "sourceDirName": "apps",
   "slug": "/apps/overview",
-  "permalink": "/homepage/docs/apps/overview",
+  "permalink": "/blog/docs/apps/overview",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/apps/overview.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Snowflake概要",
-    "permalink": "/homepage/docs/dwh/snowflake/overview"
+    "permalink": "/blog/docs/dwh/snowflake/overview"
   },
   "next": {
     "title": "BI概要",
-    "permalink": "/homepage/docs/bi/overview"
+    "permalink": "/blog/docs/bi/overview"
   }
 }

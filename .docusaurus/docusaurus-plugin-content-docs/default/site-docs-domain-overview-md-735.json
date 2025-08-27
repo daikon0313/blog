@@ -5,7 +5,7 @@
   "source": "@site/docs/domain/overview.md",
   "sourceDirName": "domain",
   "slug": "/domain/overview",
-  "permalink": "/homepage/docs/domain/overview",
+  "permalink": "/blog/docs/domain/overview",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/domain/overview.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "プログラミング言語概要",
-    "permalink": "/homepage/docs/languages/overview"
+    "permalink": "/blog/docs/languages/overview"
   },
   "next": {
     "title": "その他の技術情報",
-    "permalink": "/homepage/docs/others/overview"
+    "permalink": "/blog/docs/others/overview"
   }
 }

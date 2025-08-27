@@ -5,7 +5,7 @@
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
-  "permalink": "/homepage/docs/intro",
+  "permalink": "/blog/docs/intro",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/intro.md",
@@ -18,6 +18,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "AWS基礎",
-    "permalink": "/homepage/docs/infrastructure/aws-basics"
+    "permalink": "/blog/docs/infrastructure/aws-basics"
   }
 }

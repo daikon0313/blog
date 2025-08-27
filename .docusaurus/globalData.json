@@ -1,103 +1,103 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/homepage/docs",
+      "path": "/blog/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/homepage/docs",
+          "path": "/blog/docs",
           "mainDocId": "intro",
           "docs": [
             {
               "id": "apps/overview",
-              "path": "/homepage/docs/apps/overview",
+              "path": "/blog/docs/apps/overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "bi/overview",
-              "path": "/homepage/docs/bi/overview",
+              "path": "/blog/docs/bi/overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "domain/overview",
-              "path": "/homepage/docs/domain/overview",
+              "path": "/blog/docs/domain/overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "dwh/snowflake/overview",
-              "path": "/homepage/docs/dwh/snowflake/overview",
+              "path": "/blog/docs/dwh/snowflake/overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "infrastructure/aws-basics",
-              "path": "/homepage/docs/infrastructure/aws-basics",
+              "path": "/blog/docs/infrastructure/aws-basics",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "infrastructure/docker-basics",
-              "path": "/homepage/docs/infrastructure/docker-basics",
+              "path": "/blog/docs/infrastructure/docker-basics",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "infrastructure/kubernetes-basics",
-              "path": "/homepage/docs/infrastructure/kubernetes-basics",
+              "path": "/blog/docs/infrastructure/kubernetes-basics",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "intro",
-              "path": "/homepage/docs/intro",
+              "path": "/blog/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "languages/overview",
-              "path": "/homepage/docs/languages/overview",
+              "path": "/blog/docs/languages/overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "others/overview",
-              "path": "/homepage/docs/others/overview",
+              "path": "/blog/docs/others/overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "tutorial-basics/congratulations",
-              "path": "/homepage/docs/tutorial-basics/congratulations"
+              "path": "/blog/docs/tutorial-basics/congratulations"
             },
             {
               "id": "tutorial-basics/create-a-blog-post",
-              "path": "/homepage/docs/tutorial-basics/create-a-blog-post"
+              "path": "/blog/docs/tutorial-basics/create-a-blog-post"
             },
             {
               "id": "tutorial-basics/create-a-document",
-              "path": "/homepage/docs/tutorial-basics/create-a-document"
+              "path": "/blog/docs/tutorial-basics/create-a-document"
             },
             {
               "id": "tutorial-basics/create-a-page",
-              "path": "/homepage/docs/tutorial-basics/create-a-page"
+              "path": "/blog/docs/tutorial-basics/create-a-page"
             },
             {
               "id": "tutorial-basics/deploy-your-site",
-              "path": "/homepage/docs/tutorial-basics/deploy-your-site"
+              "path": "/blog/docs/tutorial-basics/deploy-your-site"
             },
             {
               "id": "tutorial-basics/markdown-features",
-              "path": "/homepage/docs/tutorial-basics/markdown-features"
+              "path": "/blog/docs/tutorial-basics/markdown-features"
             },
             {
               "id": "tutorial-extras/manage-docs-versions",
-              "path": "/homepage/docs/tutorial-extras/manage-docs-versions"
+              "path": "/blog/docs/tutorial-extras/manage-docs-versions"
             },
             {
               "id": "tutorial-extras/translate-your-site",
-              "path": "/homepage/docs/tutorial-extras/translate-your-site"
+              "path": "/blog/docs/tutorial-extras/translate-your-site"
             }
           ],
           "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/homepage/docs/intro",
+                "path": "/blog/docs/intro",
                 "label": "intro"
               }
             }

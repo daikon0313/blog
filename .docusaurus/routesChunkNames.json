@@ -1,5 +1,5 @@
 {
-  "/homepage/blog-9c7": {
+  "/blog/blog-5e2": {
     "__comp": "a6aa9e1f",
     "__context": {
       "plugin": "36994c47"
@@ -10,16 +10,16 @@
         "content": "28c1cb39"
       }
     ],
-    "__props": "4ae4a7ea"
+    "__props": "6be5e3b6"
   },
-  "/homepage/blog/archive-5d4": {
+  "/blog/blog/archive-4bf": {
     "__comp": "9e4087bc",
     "__context": {
       "plugin": "36994c47"
     },
-    "__props": "5994b217"
+    "__props": "7ca4e593"
   },
-  "/homepage/blog/authors-40b": {
+  "/blog/blog/authors-44c": {
     "__comp": "621db11d",
     "__context": {
       "data": {
@@ -28,9 +28,9 @@
       "plugin": "36994c47"
     },
     "sidebar": "814f3328",
-    "__props": "b812b54f"
+    "__props": "bbeb886f"
   },
-  "/homepage/blog/authors/daikon-0313-c4c": {
+  "/blog/blog/authors/daikon-0313-69c": {
     "__comp": "33fc5bb8",
     "__context": {
       "data": {
@@ -44,9 +44,9 @@
       }
     ],
     "sidebar": "814f3328",
-    "__props": "5833acd0"
+    "__props": "67e878d7"
   },
-  "/homepage/blog/sample-tech-blog-754": {
+  "/blog/blog/sample-tech-blog-dcf": {
     "__comp": "ccc49370",
     "__context": {
       "data": {
@@ -57,15 +57,15 @@
     "sidebar": "814f3328",
     "content": "ac835fe6"
   },
-  "/homepage/blog/tags-2cb": {
+  "/blog/blog/tags-542": {
     "__comp": "01a85c17",
     "__context": {
       "plugin": "36994c47"
     },
     "sidebar": "814f3328",
-    "__props": "483c89b1"
+    "__props": "0d23e810"
   },
-  "/homepage/blog/tags/best-practices-bc8": {
+  "/blog/blog/tags/best-practices-e31": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
@@ -76,9 +76,9 @@
         "content": "28c1cb39"
       }
     ],
-    "__props": "64f5a4db"
+    "__props": "3b6f5133"
   },
-  "/homepage/blog/tags/data-engineering-8f0": {
+  "/blog/blog/tags/data-engineering-c8f": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
@@ -89,9 +89,9 @@
         "content": "28c1cb39"
       }
     ],
-    "__props": "50cebfdd"
+    "__props": "38f70e39"
   },
-  "/homepage/blog/tags/python-2b4": {
+  "/blog/blog/tags/python-619": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
@@ -102,9 +102,9 @@
         "content": "28c1cb39"
       }
     ],
-    "__props": "6eb16326"
+    "__props": "1cc9f392"
   },
-  "/homepage/blog/tags/sql-fd6": {
+  "/blog/blog/tags/sql-bc5": {
     "__comp": "6875c492",
     "__context": {
       "plugin": "36994c47"
@@ -115,101 +115,101 @@
         "content": "28c1cb39"
       }
     ],
-    "__props": "474c5e58"
+    "__props": "aa90a680"
   },
-  "/homepage/markdown-page-a57": {
+  "/blog/markdown-page-b60": {
     "__comp": "1f391b9e",
     "__context": {
       "plugin": "a7456010"
     },
     "content": "393be207"
   },
-  "/homepage/docs-4df": {
+  "/blog/docs-d08": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/homepage/docs-813": {
+  "/blog/docs-c0f": {
     "__comp": "a7bd4aaa",
-    "__props": "6cab2ec1"
+    "__props": "4dc68924"
   },
-  "/homepage/docs-584": {
+  "/blog/docs-b7b": {
     "__comp": "a94703ab"
   },
-  "/homepage/docs/apps/overview-67c": {
+  "/blog/docs/apps/overview-5f6": {
     "__comp": "17896441",
     "content": "b3921f18"
   },
-  "/homepage/docs/bi/overview-2b4": {
+  "/blog/docs/bi/overview-fc1": {
     "__comp": "17896441",
     "content": "f4a0565d"
   },
-  "/homepage/docs/domain/overview-c23": {
+  "/blog/docs/domain/overview-084": {
     "__comp": "17896441",
     "content": "735b52f9"
   },
-  "/homepage/docs/dwh/snowflake/overview-c53": {
+  "/blog/docs/dwh/snowflake/overview-7ac": {
     "__comp": "17896441",
     "content": "7d24daf0"
   },
-  "/homepage/docs/infrastructure/aws-basics-443": {
+  "/blog/docs/infrastructure/aws-basics-224": {
     "__comp": "17896441",
     "content": "9f1187df"
   },
-  "/homepage/docs/infrastructure/docker-basics-e80": {
+  "/blog/docs/infrastructure/docker-basics-1be": {
     "__comp": "17896441",
     "content": "64684c01"
   },
-  "/homepage/docs/infrastructure/kubernetes-basics-e6c": {
+  "/blog/docs/infrastructure/kubernetes-basics-315": {
     "__comp": "17896441",
     "content": "3eab4aa7"
   },
-  "/homepage/docs/intro-16e": {
+  "/blog/docs/intro-f6d": {
     "__comp": "17896441",
     "content": "0e384e19"
   },
-  "/homepage/docs/languages/overview-44c": {
+  "/blog/docs/languages/overview-f10": {
     "__comp": "17896441",
     "content": "ad1273af"
   },
-  "/homepage/docs/others/overview-0f0": {
+  "/blog/docs/others/overview-c44": {
     "__comp": "17896441",
     "content": "258cb6d5"
   },
-  "/homepage/docs/tutorial-basics/congratulations-2c6": {
+  "/blog/docs/tutorial-basics/congratulations-967": {
     "__comp": "17896441",
     "content": "822bd8ab"
   },
-  "/homepage/docs/tutorial-basics/create-a-blog-post-0e9": {
+  "/blog/docs/tutorial-basics/create-a-blog-post-61e": {
     "__comp": "17896441",
     "content": "533a09ca"
   },
-  "/homepage/docs/tutorial-basics/create-a-document-b4b": {
+  "/blog/docs/tutorial-basics/create-a-document-d04": {
     "__comp": "17896441",
     "content": "1e4232ab"
   },
-  "/homepage/docs/tutorial-basics/create-a-page-6b3": {
+  "/blog/docs/tutorial-basics/create-a-page-ef0": {
     "__comp": "17896441",
     "content": "5c868d36"
   },
-  "/homepage/docs/tutorial-basics/deploy-your-site-b9c": {
+  "/blog/docs/tutorial-basics/deploy-your-site-079": {
     "__comp": "17896441",
     "content": "f55d3e7a"
   },
-  "/homepage/docs/tutorial-basics/markdown-features-83d": {
+  "/blog/docs/tutorial-basics/markdown-features-c3b": {
     "__comp": "17896441",
     "content": "18c41134"
   },
-  "/homepage/docs/tutorial-extras/manage-docs-versions-b78": {
+  "/blog/docs/tutorial-extras/manage-docs-versions-c27": {
     "__comp": "17896441",
     "content": "dff1c289"
   },
-  "/homepage/docs/tutorial-extras/translate-your-site-c6f": {
+  "/blog/docs/tutorial-extras/translate-your-site-7d0": {
     "__comp": "17896441",
     "content": "e44a2883"
   },
-  "/homepage/-9c8": {
+  "/blog/-980": {
     "__comp": "1df93b7f",
     "__context": {
       "plugin": "a7456010"

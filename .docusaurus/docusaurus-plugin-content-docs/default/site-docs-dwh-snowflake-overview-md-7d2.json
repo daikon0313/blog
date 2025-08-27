@@ -5,7 +5,7 @@
   "source": "@site/docs/dwh/snowflake/overview.md",
   "sourceDirName": "dwh/snowflake",
   "slug": "/dwh/snowflake/overview",
-  "permalink": "/homepage/docs/dwh/snowflake/overview",
+  "permalink": "/blog/docs/dwh/snowflake/overview",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/dwh/snowflake/overview.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Kubernetes基礎",
-    "permalink": "/homepage/docs/infrastructure/kubernetes-basics"
+    "permalink": "/blog/docs/infrastructure/kubernetes-basics"
   },
   "next": {
     "title": "アプリケーション概要",
-    "permalink": "/homepage/docs/apps/overview"
+    "permalink": "/blog/docs/apps/overview"
   }
 }
