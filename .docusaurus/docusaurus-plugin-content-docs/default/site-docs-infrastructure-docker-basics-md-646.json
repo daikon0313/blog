@@ -1,0 +1,27 @@
+{
+  "id": "infrastructure/docker-basics",
+  "title": "Docker基礎",
+  "description": "このページはサンプルページです。実際のコンテンツではありません。",
+  "source": "@site/docs/infrastructure/docker-basics.md",
+  "sourceDirName": "infrastructure",
+  "slug": "/infrastructure/docker-basics",
+  "permalink": "/homepage/docs/infrastructure/docker-basics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/infrastructure/docker-basics.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AWS基礎",
+    "permalink": "/homepage/docs/infrastructure/aws-basics"
+  },
+  "next": {
+    "title": "Kubernetes基礎",
+    "permalink": "/homepage/docs/infrastructure/kubernetes-basics"
+  }
+}

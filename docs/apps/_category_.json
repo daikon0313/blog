@@ -1,0 +1,8 @@
+{
+  "label": "アプリ",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "アプリケーション開発に関するドキュメント集です。"
+  }
+}

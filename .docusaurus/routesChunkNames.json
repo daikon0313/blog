@@ -1,0 +1,219 @@
+{
+  "/homepage/blog-9c7": {
+    "__comp": "a6aa9e1f",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "28c1cb39"
+      }
+    ],
+    "__props": "4ae4a7ea"
+  },
+  "/homepage/blog/archive-5d4": {
+    "__comp": "9e4087bc",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "__props": "5994b217"
+  },
+  "/homepage/blog/authors-40b": {
+    "__comp": "621db11d",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "__props": "b812b54f"
+  },
+  "/homepage/blog/authors/daikon-0313-c4c": {
+    "__comp": "33fc5bb8",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "items": [
+      {
+        "content": "28c1cb39"
+      }
+    ],
+    "sidebar": "814f3328",
+    "__props": "5833acd0"
+  },
+  "/homepage/blog/sample-tech-blog-754": {
+    "__comp": "ccc49370",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "content": "ac835fe6"
+  },
+  "/homepage/blog/tags-2cb": {
+    "__comp": "01a85c17",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "__props": "483c89b1"
+  },
+  "/homepage/blog/tags/best-practices-bc8": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "28c1cb39"
+      }
+    ],
+    "__props": "64f5a4db"
+  },
+  "/homepage/blog/tags/data-engineering-8f0": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "28c1cb39"
+      }
+    ],
+    "__props": "50cebfdd"
+  },
+  "/homepage/blog/tags/python-2b4": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "28c1cb39"
+      }
+    ],
+    "__props": "6eb16326"
+  },
+  "/homepage/blog/tags/sql-fd6": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "28c1cb39"
+      }
+    ],
+    "__props": "474c5e58"
+  },
+  "/homepage/markdown-page-a57": {
+    "__comp": "1f391b9e",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "content": "393be207"
+  },
+  "/homepage/docs-4df": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "aba21aa0"
+    }
+  },
+  "/homepage/docs-813": {
+    "__comp": "a7bd4aaa",
+    "__props": "6cab2ec1"
+  },
+  "/homepage/docs-584": {
+    "__comp": "a94703ab"
+  },
+  "/homepage/docs/apps/overview-67c": {
+    "__comp": "17896441",
+    "content": "b3921f18"
+  },
+  "/homepage/docs/bi/overview-2b4": {
+    "__comp": "17896441",
+    "content": "f4a0565d"
+  },
+  "/homepage/docs/domain/overview-c23": {
+    "__comp": "17896441",
+    "content": "735b52f9"
+  },
+  "/homepage/docs/dwh/snowflake/overview-c53": {
+    "__comp": "17896441",
+    "content": "7d24daf0"
+  },
+  "/homepage/docs/infrastructure/aws-basics-443": {
+    "__comp": "17896441",
+    "content": "9f1187df"
+  },
+  "/homepage/docs/infrastructure/docker-basics-e80": {
+    "__comp": "17896441",
+    "content": "64684c01"
+  },
+  "/homepage/docs/infrastructure/kubernetes-basics-e6c": {
+    "__comp": "17896441",
+    "content": "3eab4aa7"
+  },
+  "/homepage/docs/intro-16e": {
+    "__comp": "17896441",
+    "content": "0e384e19"
+  },
+  "/homepage/docs/languages/overview-44c": {
+    "__comp": "17896441",
+    "content": "ad1273af"
+  },
+  "/homepage/docs/others/overview-0f0": {
+    "__comp": "17896441",
+    "content": "258cb6d5"
+  },
+  "/homepage/docs/tutorial-basics/congratulations-2c6": {
+    "__comp": "17896441",
+    "content": "822bd8ab"
+  },
+  "/homepage/docs/tutorial-basics/create-a-blog-post-0e9": {
+    "__comp": "17896441",
+    "content": "533a09ca"
+  },
+  "/homepage/docs/tutorial-basics/create-a-document-b4b": {
+    "__comp": "17896441",
+    "content": "1e4232ab"
+  },
+  "/homepage/docs/tutorial-basics/create-a-page-6b3": {
+    "__comp": "17896441",
+    "content": "5c868d36"
+  },
+  "/homepage/docs/tutorial-basics/deploy-your-site-b9c": {
+    "__comp": "17896441",
+    "content": "f55d3e7a"
+  },
+  "/homepage/docs/tutorial-basics/markdown-features-83d": {
+    "__comp": "17896441",
+    "content": "18c41134"
+  },
+  "/homepage/docs/tutorial-extras/manage-docs-versions-b78": {
+    "__comp": "17896441",
+    "content": "dff1c289"
+  },
+  "/homepage/docs/tutorial-extras/translate-your-site-c6f": {
+    "__comp": "17896441",
+    "content": "e44a2883"
+  },
+  "/homepage/-9c8": {
+    "__comp": "1df93b7f",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "config": "5e9f5e1a"
+  }
+}

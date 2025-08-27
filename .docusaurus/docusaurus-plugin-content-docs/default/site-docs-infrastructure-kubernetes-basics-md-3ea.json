@@ -1,0 +1,27 @@
+{
+  "id": "infrastructure/kubernetes-basics",
+  "title": "Kubernetes基礎",
+  "description": "このページはサンプルページです。実際のコンテンツではありません。",
+  "source": "@site/docs/infrastructure/kubernetes-basics.md",
+  "sourceDirName": "infrastructure",
+  "slug": "/infrastructure/kubernetes-basics",
+  "permalink": "/homepage/docs/infrastructure/kubernetes-basics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/infrastructure/kubernetes-basics.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Docker基礎",
+    "permalink": "/homepage/docs/infrastructure/docker-basics"
+  },
+  "next": {
+    "title": "Snowflake概要",
+    "permalink": "/homepage/docs/dwh/snowflake/overview"
+  }
+}

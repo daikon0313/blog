@@ -1,0 +1,8 @@
+{
+  "label": "インフラ",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "インフラストラクチャに関するドキュメント集です。AWS、Docker、Kubernetesなどの技術を網羅しています。"
+  }
+}

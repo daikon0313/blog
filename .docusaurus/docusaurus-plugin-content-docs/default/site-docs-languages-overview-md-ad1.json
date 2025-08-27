@@ -1,0 +1,27 @@
+{
+  "id": "languages/overview",
+  "title": "プログラミング言語概要",
+  "description": "このページはサンプルページです。実際のコンテンツではありません。",
+  "source": "@site/docs/languages/overview.md",
+  "sourceDirName": "languages",
+  "slug": "/languages/overview",
+  "permalink": "/homepage/docs/languages/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/languages/overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BI概要",
+    "permalink": "/homepage/docs/bi/overview"
+  },
+  "next": {
+    "title": "ドメイン情報概要",
+    "permalink": "/homepage/docs/domain/overview"
+  }
+}

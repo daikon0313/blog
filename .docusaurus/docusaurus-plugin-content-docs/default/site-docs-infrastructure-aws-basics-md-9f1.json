@@ -1,0 +1,27 @@
+{
+  "id": "infrastructure/aws-basics",
+  "title": "AWS基礎",
+  "description": "このページはサンプルページです。実際のコンテンツではありません。",
+  "source": "@site/docs/infrastructure/aws-basics.md",
+  "sourceDirName": "infrastructure",
+  "slug": "/infrastructure/aws-basics",
+  "permalink": "/homepage/docs/infrastructure/aws-basics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/infrastructure/aws-basics.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial Intro",
+    "permalink": "/homepage/docs/intro"
+  },
+  "next": {
+    "title": "Docker基礎",
+    "permalink": "/homepage/docs/infrastructure/docker-basics"
+  }
+}
