@@ -50,20 +50,7 @@ export default {
           "sidebarPath": "./sidebars.ts",
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
-        "blog": {
-          "showReadingTime": true,
-          "feedOptions": {
-            "type": [
-              "rss",
-              "atom"
-            ],
-            "xslt": true
-          },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          "onInlineTags": "warn",
-          "onInlineAuthors": "warn",
-          "onUntruncatedBlogPosts": "warn"
-        },
+        "blog": false,
         "theme": {
           "customCss": "./src/css/custom.css"
         }
@@ -84,11 +71,6 @@ export default {
           "sidebarId": "tutorialSidebar",
           "position": "left",
           "label": "ドキュメント"
-        },
-        {
-          "to": "/blog",
-          "label": "ブログ",
-          "position": "left"
         },
         {
           "href": "https://github.com/daikon0313/homepage",
@@ -130,10 +112,6 @@ export default {
         {
           "title": "More",
           "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
             {
               "label": "GitHub",
               "href": "https://github.com/facebook/docusaurus"

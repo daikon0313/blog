@@ -3,56 +3,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/blog/blog',
-    component: ComponentCreator('/blog/blog', '5e2'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/archive',
-    component: ComponentCreator('/blog/blog/archive', '4bf'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/authors',
-    component: ComponentCreator('/blog/blog/authors', '44c'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/authors/daikon-0313',
-    component: ComponentCreator('/blog/blog/authors/daikon-0313', '69c'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/sample-tech-blog',
-    component: ComponentCreator('/blog/blog/sample-tech-blog', 'dcf'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/tags',
-    component: ComponentCreator('/blog/blog/tags', '542'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/tags/best-practices',
-    component: ComponentCreator('/blog/blog/tags/best-practices', 'e31'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/tags/data-engineering',
-    component: ComponentCreator('/blog/blog/tags/data-engineering', 'c8f'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/tags/python',
-    component: ComponentCreator('/blog/blog/tags/python', '619'),
-    exact: true
-  },
-  {
-    path: '/blog/blog/tags/sql',
-    component: ComponentCreator('/blog/blog/tags/sql', 'bc5'),
-    exact: true
-  },
-  {
     path: '/blog/markdown-page',
     component: ComponentCreator('/blog/markdown-page', 'b60'),
     exact: true
